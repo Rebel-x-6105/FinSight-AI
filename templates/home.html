@@ -2,22 +2,351 @@
 
 
 {% block title %}
-Home - FinSight AI
+FinSight AI - Intelligent Personal Finance
 {% endblock %}
 
 
 {% block content %}
 
-<h1>FinSight AI</h1>
 
-<h2>
-    Understand Your Money. Predict Your Future.
-</h2>
+<!-- Hero Section -->
+<section class="hero">
 
-<p>
-    An intelligent personal-finance platform designed
-    to help users understand their spending behavior
-    and make smarter financial decisions.
-</p>
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                INTELLIGENT PERSONAL FINANCE
+            </p>
+
+            <h1>
+                Understand Your Money.
+                <span>Predict Your Future.</span>
+            </h1>
+
+            <p class="hero-description">
+
+                FinSight AI is an intelligent personal-finance
+                platform that analyzes your spending behavior,
+                identifies patterns, predicts future expenses,
+                and helps you make smarter financial decisions.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="{{ url_for('register') }}"
+                    class="btn btn-primary"
+                >
+                    Get Started
+                </a>
+
+                <a
+                    href="{{ url_for('login') }}"
+                    class="btn btn-secondary"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="hero-note">
+
+                <span>✓</span>
+                Smart financial tracking
+
+                <span>✓</span>
+                AI-powered insights
+
+                <span>✓</span>
+                Predictive analytics
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Preview Card -->
+        <div class="hero-preview">
+
+            <div class="preview-header">
+
+                <div>
+
+                    <p>
+                        Financial Overview
+                    </p>
+
+                    <h3>
+                        Your Money at a Glance
+                    </h3>
+
+                </div>
+
+                <span class="preview-badge">
+                    AI Insights
+                </span>
+
+            </div>
+
+
+            <div class="preview-balance">
+
+                <p>
+                    Monthly Savings
+                </p>
+
+                <h2>
+                    ₹0
+                </h2>
+
+                <span>
+                    Start tracking to see insights
+                </span>
+
+            </div>
+
+
+            <div class="preview-grid">
+
+                <div class="preview-stat">
+
+                    <p>
+                        Income
+                    </p>
+
+                    <strong>
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="preview-stat">
+
+                    <p>
+                        Expenses
+                    </p>
+
+                    <strong>
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="preview-stat">
+
+                    <p>
+                        Savings Rate
+                    </p>
+
+                    <strong>
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Features Section -->
+<section class="features-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                SMARTER FINANCIAL DECISIONS
+            </p>
+
+            <h2>
+                Understand where your money goes
+            </h2>
+
+            <p>
+                FinSight AI will combine financial tracking,
+                analytics, and machine learning to transform
+                your transaction data into useful insights.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+
+            <!-- Feature 1 -->
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    ₹
+                </div>
+
+                <h3>
+                    Smart Expense Tracking
+                </h3>
+
+                <p>
+                    Track income and expenses and understand
+                    exactly where your money is being spent.
+                </p>
+
+            </article>
+
+
+            <!-- Feature 2 -->
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    ◉
+                </div>
+
+                <h3>
+                    Spending Personality
+                </h3>
+
+                <p>
+                    Analyze spending behavior to identify your
+                    unique financial personality and habits.
+                </p>
+
+            </article>
+
+
+            <!-- Feature 3 -->
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    !
+                </div>
+
+                <h3>
+                    Anomaly Detection
+                </h3>
+
+                <p>
+                    Detect transactions that look unusual
+                    compared with your normal spending behavior.
+                </p>
+
+            </article>
+
+
+            <!-- Feature 4 -->
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    ↗
+                </div>
+
+                <h3>
+                    Expense Forecasting
+                </h3>
+
+                <p>
+                    Analyze historical spending and estimate
+                    future expenses using predictive models.
+                </p>
+
+            </article>
+
+
+            <!-- Feature 5 -->
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    ↻
+                </div>
+
+                <h3>
+                    Subscription Detection
+                </h3>
+
+                <p>
+                    Identify recurring payments and understand
+                    their monthly and yearly financial impact.
+                </p>
+
+            </article>
+
+
+            <!-- Feature 6 -->
+            <article class="feature-card">
+
+                <div class="feature-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Financial Insights
+                </h3>
+
+                <p>
+                    Receive personalized insights based on your
+                    savings, expenses, patterns, and forecasts.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Call To Action -->
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <div>
+
+                <p class="section-label">
+                    YOUR FINANCIAL JOURNEY
+                </p>
+
+                <h2>
+                    Build a clearer picture of your finances.
+                </h2>
+
+                <p>
+                    Start tracking today and let FinSight AI
+                    transform financial data into meaningful insights.
+                </p>
+
+            </div>
+
+
+            <a
+                href="{{ url_for('register') }}"
+                class="btn btn-primary"
+            >
+                Create Account
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 {% endblock %}
