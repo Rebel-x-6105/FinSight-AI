@@ -6,7 +6,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+
+    project_name = "FinSight AI"
+
+    return render_template(
+        "home.html",
+        project_name=project_name
+    )
 
 
 @app.route("/login")

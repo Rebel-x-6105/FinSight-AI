@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
 
-    <title>FinSight AI - About</title>
-</head>
 
-<body>
+{% block title %}
+About - FinSight AI
+{% endblock %}
 
-    <h1>About FinSight AI</h1>
 
-    <p>
-        FinSight AI is an intelligent personal-finance and spending
-        analytics platform built using Flask and Python.
-    </p>
+{% block content %}
 
-</body>
-</html>
+<h1>About FinSight AI</h1>
+
+<p>
+    FinSight AI is an intelligent personal-finance
+    and spending analytics platform built using
+    Flask and Python.
+</p>
+
+{% endblock %}
