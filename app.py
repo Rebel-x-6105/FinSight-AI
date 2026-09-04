@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 app = Flask(__name__)
@@ -15,9 +15,26 @@ def home():
     )
 
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+
+    message = None
+    submitted_email = None
+
+    if request.method == "POST":
+
+        submitted_email = request.form.get("email", "").strip()
+
+        message = (
+            "Login form received successfully. "
+            "Real authentication will be added in a later phase."
+        )
+
+    return render_template(
+        "login.html",
+        message=message,
+        submitted_email=submitted_email
+    )
 
 
 @app.route("/register")

@@ -8,10 +8,116 @@ Login - FinSight AI
 
 {% block content %}
 
-<h1>Login</h1>
+<section class="auth-section">
 
-<p>
-    Sign in to access your FinSight AI account.
-</p>
+    <div class="container auth-container">
+
+        <div class="auth-card">
+
+            <div class="auth-header">
+
+                <p class="section-label">
+                    WELCOME BACK
+                </p>
+
+                <h1>
+                    Login to FinSight AI
+                </h1>
+
+                <p>
+                    Access your financial dashboard and continue
+                    building a clearer picture of your finances.
+                </p>
+
+            </div>
+
+
+            {% if message %}
+
+                <div class="form-message">
+
+                    {{ message }}
+
+                    {% if submitted_email %}
+
+                        <span>
+                            Submitted email: {{ submitted_email }}
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+            {% endif %}
+
+
+            <form
+                method="POST"
+                action="{{ url_for('login') }}"
+                class="auth-form"
+            >
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        value="{{ submitted_email or '' }}"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary auth-submit"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <div class="auth-footer">
+
+                <p>
+                    Don't have an account?
+
+                    <a href="{{ url_for('register') }}">
+                        Register
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}

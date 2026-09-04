@@ -6,6 +6,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="FinSight AI - Intelligent personal finance and spending analytics platform."
+    >
+
     <title>
         {% block title %}
         FinSight AI
@@ -20,17 +25,26 @@
 
 <body>
 
-    <header>
+    <!-- Navigation -->
+    <header class="site-header">
 
-        <nav>
+        <nav class="navbar container">
 
-            <div>
-                <a href="{{ url_for('home') }}">
+            <!-- Brand -->
+            <a
+                href="{{ url_for('home') }}"
+                class="brand"
+            >
+                <span class="brand-icon">F</span>
+
+                <span class="brand-name">
                     FinSight AI
-                </a>
-            </div>
+                </span>
+            </a>
 
-            <div>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
 
                 <a href="{{ url_for('home') }}">
                     Home
@@ -48,7 +62,10 @@
                     Login
                 </a>
 
-                <a href="{{ url_for('register') }}">
+                <a
+                    href="{{ url_for('register') }}"
+                    class="nav-register"
+                >
                     Register
                 </a>
 
@@ -59,6 +76,7 @@
     </header>
 
 
+    <!-- Page-specific content -->
     <main>
 
         {% block content %}
@@ -67,11 +85,29 @@
     </main>
 
 
-    <footer>
+    <!-- Footer -->
+    <footer class="site-footer">
 
-        <p>
-            © 2026 FinSight AI
-        </p>
+        <div class="container footer-content">
+
+            <div>
+
+                <h3>
+                    FinSight AI
+                </h3>
+
+                <p>
+                    Understand your money.
+                    Make smarter financial decisions.
+                </p>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 FinSight AI
+            </p>
+
+        </div>
 
     </footer>
 
