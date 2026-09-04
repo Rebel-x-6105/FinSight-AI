@@ -816,6 +816,23 @@ a {
 
     font-size: 13px;
 }
+
+.form-message-error {
+    background: #fff4f3;
+
+    border-color: #fecdca;
+
+    color: #b42318;
+}
+
+
+.form-message-success {
+    background: #ecfdf3;
+
+    border-color: #abefc6;
+
+    color: #067647;
+}
 /* =========================================================
    Responsive Design
    ========================================================= */
@@ -1074,7 +1091,7 @@ a {
         white-space: normal;
     }
 
-}
+
 
 /* -------------------------
    Small mobile devices

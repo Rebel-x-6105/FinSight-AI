@@ -37,9 +37,45 @@ def login():
     )
 
 
-@app.route("/register")
+@app.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template("register.html")
+
+    message = None
+    message_type = None
+
+    submitted_name = ""
+    submitted_email = ""
+
+    if request.method == "POST":
+
+        submitted_name = request.form.get("full_name", "").strip()
+        submitted_email = request.form.get("email", "").strip()
+
+        password = request.form.get("password", "")
+        confirm_password = request.form.get("confirm_password", "")
+
+        if password != confirm_password:
+
+            message = "Password and Confirm Password do not match."
+            message_type = "error"
+
+        else:
+
+            message = (
+                "Registration form received successfully. "
+                "Account creation will be implemented when the database "
+                "and authentication system are added."
+            )
+
+            message_type = "success"
+
+    return render_template(
+        "register.html",
+        message=message,
+        message_type=message_type,
+        submitted_name=submitted_name,
+        submitted_email=submitted_email
+    )
 
 
 @app.route("/dashboard")
