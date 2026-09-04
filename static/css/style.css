@@ -1099,6 +1099,30 @@ a {
 
 @media (max-width: 480px) {
 
+    .dashboard-section {
+    padding: 40px 0 55px;
+    }
+
+
+    .dashboard-header h1 {
+    font-size: 30px;
+    }
+
+    .summary-card {
+    padding: 20px;
+    }
+
+    .summary-card h2 {
+    font-size: 27px;
+    }
+
+    .dashboard-panel {
+    padding: 20px;
+    }
+
+    .dashboard-empty-state {
+    min-height: 180px;
+    }
     .auth-section {
     padding: 40px 0;
     }
@@ -1115,14 +1139,12 @@ a {
         width: 90%;
     }
 
-
     .brand-icon {
         width: 34px;
         height: 34px;
 
         font-size: 16px;
     }
-
 
     .brand-name {
         font-size: 18px;

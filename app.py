@@ -80,11 +80,23 @@ def register():
 
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html")
+
+    dashboard_data = {
+        "income": 0,
+        "expenses": 0,
+        "savings": 0,
+        "savings_rate": 0
+    }
+
+    return render_template(
+        "dashboard.html",
+        dashboard_data=dashboard_data
+    )
 
 
 @app.route("/about")
 def about():
+
     return render_template("about.html")
 
 

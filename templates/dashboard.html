@@ -8,10 +8,313 @@ Dashboard - FinSight AI
 
 {% block content %}
 
-<h1>Financial Dashboard</h1>
+<section class="dashboard-section">
 
-<p>
-    Your financial overview will appear here.
-</p>
+    <div class="container">
+
+
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+
+            <div>
+
+                <p class="section-label">
+                    FINANCIAL OVERVIEW
+                </p>
+
+                <h1>
+                    Financial Dashboard
+                </h1>
+
+                <p>
+                    Your financial summary and intelligent insights
+                    will appear here as you begin tracking your money.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Summary Cards -->
+        <div class="summary-grid">
+
+
+            <article class="summary-card">
+
+                <div class="summary-card-header">
+
+                    <p>
+                        Total Income
+                    </p>
+
+                    <span class="summary-icon">
+                        ↑
+                    </span>
+
+                </div>
+
+                <h2>
+                    ₹{{ dashboard_data.income }}
+                </h2>
+
+                <span class="summary-caption">
+                    Income recorded this period
+                </span>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <div class="summary-card-header">
+
+                    <p>
+                        Total Expenses
+                    </p>
+
+                    <span class="summary-icon">
+                        ↓
+                    </span>
+
+                </div>
+
+                <h2>
+                    ₹{{ dashboard_data.expenses }}
+                </h2>
+
+                <span class="summary-caption">
+                    Expenses recorded this period
+                </span>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <div class="summary-card-header">
+
+                    <p>
+                        Total Savings
+                    </p>
+
+                    <span class="summary-icon">
+                        ₹
+                    </span>
+
+                </div>
+
+                <h2>
+                    ₹{{ dashboard_data.savings }}
+                </h2>
+
+                <span class="summary-caption">
+                    Income remaining after expenses
+                </span>
+
+            </article>
+
+
+
+            <article class="summary-card">
+
+                <div class="summary-card-header">
+
+                    <p>
+                        Savings Rate
+                    </p>
+
+                    <span class="summary-icon">
+                        %
+                    </span>
+
+                </div>
+
+                <h2>
+                    {{ dashboard_data.savings_rate }}%
+                </h2>
+
+                <span class="summary-caption">
+                    Percentage of income saved
+                </span>
+
+            </article>
+
+        </div>
+
+
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content-grid">
+
+
+            <!-- Spending Overview -->
+            <article class="dashboard-panel dashboard-panel-large">
+
+                <div class="dashboard-panel-header">
+
+                    <div>
+
+                        <p class="dashboard-panel-label">
+                            ANALYTICS
+                        </p>
+
+                        <h2>
+                            Spending Overview
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-empty-state">
+
+                    <div class="empty-state-icon">
+                        ₹
+                    </div>
+
+                    <h3>
+                        No transaction data available yet.
+                    </h3>
+
+                    <p>
+                        Spending charts and category breakdowns
+                        will appear after transactions are added.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Financial Personality -->
+            <article class="dashboard-panel">
+
+                <p class="dashboard-panel-label">
+                    MACHINE LEARNING
+                </p>
+
+                <h2>
+                    Financial Personality
+                </h2>
+
+                <div class="dashboard-placeholder">
+
+                    <span class="placeholder-icon">
+                        ◉
+                    </span>
+
+                    <p>
+                        Complete more transactions to discover
+                        your financial personality.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Expense Forecast -->
+            <article class="dashboard-panel">
+
+                <p class="dashboard-panel-label">
+                    PREDICTION
+                </p>
+
+                <h2>
+                    Expense Forecast
+                </h2>
+
+                <div class="dashboard-placeholder">
+
+                    <span class="placeholder-icon">
+                        ↗
+                    </span>
+
+                    <p>
+                        Forecasting will become available after
+                        sufficient transaction history.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Recent Transactions -->
+            <article class="dashboard-panel dashboard-panel-large">
+
+                <div class="dashboard-panel-header">
+
+                    <div>
+
+                        <p class="dashboard-panel-label">
+                            ACTIVITY
+                        </p>
+
+                        <h2>
+                            Recent Transactions
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="transaction-empty">
+
+                    <p>
+                        No transactions available.
+                    </p>
+
+                    <span>
+                        Your latest income and expense records
+                        will appear here.
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Financial Insights -->
+            <article class="dashboard-panel dashboard-insights">
+
+                <p class="dashboard-panel-label">
+                    AI INSIGHTS
+                </p>
+
+                <h2>
+                    Financial Insights
+                </h2>
+
+                <div class="dashboard-placeholder">
+
+                    <span class="placeholder-icon">
+                        ✦
+                    </span>
+
+                    <p>
+                        Insights will appear once financial
+                        data has been analyzed.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 {% endblock %}
